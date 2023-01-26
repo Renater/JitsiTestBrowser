@@ -1,0 +1,15 @@
+services:
+  jwt_server:
+    image: jitsimeettestbrowsertool
+    build:
+        context: jitsimeettestbrowsertool
+    container_name: jitsimeettestbrowsertool
+    ports:
+      - "8080:80"
+      - "8443:443"
+    logging:
+      driver: syslog
+      options:
+        tag: "jitsimeettestbrowsertool"
+    env_file:
+      - .env
